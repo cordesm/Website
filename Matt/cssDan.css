@@ -1,0 +1,140 @@
+html, body, .container, .fluid {
+  height: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+body {
+  color: #222;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+
+.fluid {
+  display: flex;
+}
+
+.content {
+  padding: 0 0.5em;
+  flex: 1;
+}
+
+.sidebar {
+  display: flex;
+  flex-shrink: 0;
+}
+
+@media (min-width: 800px) {
+  .fluid {
+    flex-flow: row-reverse;
+  }
+
+  .sidebar {
+    flex-flow: column;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+  .fluid {
+    flex-flow: column;
+  }
+
+  .sidebar {
+    flex-flow: row;
+  }
+
+  .info {
+    margin-left: 1em;
+  }
+}
+
+@media (max-width: 599px) {
+  .fluid {
+    flex-flow: column;
+  }
+
+  .sidebar {
+    flex-flow: column;
+  }
+
+  .photo {
+    margin: auto;
+  }
+
+  .info {
+    background: #eee;
+    padding: 0 1em 1em;
+    border-radius: 10px;
+    margin: 1em auto;
+    width: 333px;
+    box-sizing: border-box;
+  }
+}
+
+.photo {
+  /*border-radius: 10px;*/
+  margin-top: 1em;
+  width: 333px;
+  /*height: 333px;*/
+  text-align: center;
+  /*background: red;*/
+}
+
+.info {
+  /*background: blue;*/
+  flex: 1;
+}
+
+.publications {
+  padding-left: 1em;
+}
+
+.abstract {
+  margin-top: .25em;
+  margin-left: 1em;
+  display: none;
+  font-size: 75%;
+}
+
+.abstract.visible {
+  display: block;
+}
+
+.title {
+  font-style: italic;
+}
+
+.contact-header {
+  font-size: 1em;
+}
+
+td:first-child {
+  font-weight: bold;
+  width: 40%;
+}
+
+.paper{
+  margin: .75em;
+}
+
+.joint-with {
+  margin: 0;
+  font-size: 90%;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  margin: 0;
+  /*margin: .25em 0;*/
+  font-weight: normal;
+}
+
+address {
+  font-style: normal;
+}

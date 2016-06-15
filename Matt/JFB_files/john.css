@@ -1,0 +1,34 @@
+div.navlink,div.navleft {
+        background-color:#eee;
+        border-left:2px solid #800000;
+	padding:5px 1px 5px 5px;
+        margin-bottom:5px;
+        font-weight:700;
+        text-decoration: none;
+        }
+
+div.navlink:hover {
+        background-color:#FFE6E6;
+}
+
+div.commenthidden {
+    display:none;
+  }
+
+  div.commentshown {
+    display:block;
+  }
+
+div.smallcomment {
+    font-size:90%;
+    padding-left:5px
+  }
+
+a {text-decoration: none; font-weight:600; color:#000000}
+a:hover {text-decoration:underline;}
+
+body {font-size:14px;}
+
+h1 {margin-top:15px}
+h4 {font-size:18px; font-weight:700; margin-bottom:8px}
+h5 {font-size:15px; font-weight:600; margin-bottom:5px}
