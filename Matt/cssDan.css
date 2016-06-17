@@ -93,18 +93,29 @@ body {
 }
 
 .abstract {
-  margin-top: .25em;
-  margin-left: 1em;
+  padding-top: .25em;
+  padding-left: 1em;
   display: none;
   font-size: 75%;
 }
 
-.abstract.visible {
-  display: block;
-}
-
 .title {
   font-style: italic;
+}
+
+a[data-toggle] {
+  color: #666;
+}
+
+a[data-toggle]::before {
+  display: inline-block;
+  content: '▸';
+  margin: 0 3px;
+  transition: transform 250ms ease-in-out;
+}
+
+a[data-toggle].active::before {
+  transform: rotate(90deg);
 }
 
 .contact-header {

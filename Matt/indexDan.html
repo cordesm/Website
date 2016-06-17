@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="./cssDan.css">
     <!--<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_SVG"></script>-->
   </head>
@@ -39,7 +39,7 @@
               <div class="paper">
                 <h4><span class="title"><a href="https://arxiv.org/abs/1606.00129" title="Stability and the Morse boundary">Stability and the Morse boundary</a></span> </h4>
                 <div class="joint-with">Joint with David Hume</div>
-                <div class="joint-with">▸<a data-toggle="stability" href="#">abstract</a></div>
+                <div class="joint-with"><a data-toggle="stability" href="#">abstract</a></div>
                 <div class="abstract" data-toggle-id="stability">
                   <p>Stable subgroups and the Morse boundary are two systematic approaches to collect and study the hyperbolic aspects of finitely generated groups. In this paper we unify and generalize these strategies by viewing any geodesic metric space as a countable union of stable subspaces: we show that every stable subgroup is a quasi-convex subset of a set in this collection and that the Morse boundary is recovered as the direct limit of the usual Gromov boundaries of these hyperbolic subspaces.</p>
 
@@ -60,7 +60,7 @@
               </div>
               <div class="paper">
                 <h4><span class="title">Random nilpotent groups I</span> [<a data-toggle="random-nilpotent" href="#">abstract</a>, <a href="https://arxiv.org/abs/1506.01426" title="Random nilpotent groups I">arXiv</a>]</h4>
-                <div class="joint-with"> Joint with <a href="http://mduchin.math.tufts.edu/">Moon Duchin</a>, <a href="http://homepages.math.uic.edu/~yen/">Yen Duong</a>, <a href="https://www.math.wisc.edu/~ho/">Meng-Che Ho</a>, <a href="http://andrew-sanchez.weebly.com/">Andrew P. Sánchez</a> </br> 
+                <div class="joint-with"> Joint with <a href="http://mduchin.math.tufts.edu/">Moon Duchin</a>, <a href="http://homepages.math.uic.edu/~yen/">Yen Duong</a>, <a href="https://www.math.wisc.edu/~ho/">Meng-Che Ho</a>, <a href="http://andrew-sanchez.weebly.com/">Andrew P. Sánchez</a> </br>
                   To appear in IMRN</div>
                 <div class="abstract" data-toggle-id="random-nilpotent">
                   <p>We study random nilpotent groups in the well-established style of random groups, by choosing relators uniformly among freely reduced words of (nearly) equal length and letting the length tend to infinity. Whereas random groups are quotients of a free group by such a random set of relators, random nilpotent groups are formed as corresponding quotients of a free nilpotent group. This model reveals new phenomena because nilpotent groups are not "visible" in the standard model of random groups (due to the sharp phase transition from infinite hyperbolic to trivial groups).</p>
@@ -87,19 +87,14 @@
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
     <script>
-      document.addEventListener('click', function(event) {
-        var toggle = event.target.dataset.toggle;
-        if (toggle) {
-          event.preventDefault();
-          var abstract = document.querySelector('[data-toggle-id="' + toggle + '"]');
-          if (abstract.classList.contains('visible')) {
-            abstract.classList.remove('visible');
-          } else {
-            abstract.classList.add('visible');
-          }
-        }
-      }, true);
+      $(document.body).on('click', '[data-toggle]', function(event) {
+        event.preventDefault();
+        var $target = $(event.target);
+        $target.toggleClass('active');
+        $('[data-toggle-id=' + $target.data('toggle') + ']').slideToggle();
+      });
     </script>
   </body>
 </html>
